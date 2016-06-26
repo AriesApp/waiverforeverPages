@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>changelogs</title>
+
+
+<style type="text/css">
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+
+<style type="text/css">
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h3 id="toc_0">Update log:</h3>
+
+<p>1.32.4 June 21, 2016</p>
+
+<ul>
+<li>Optimized for iPhone 6s &amp; iPhone 6s Plus</li>
+<li>Add 1Password support when login</li>
+<li>Automatically upload waivers when network is back</li>
+<li>Some UI improvements</li>
+<li>Note: this version doesn&#39;t support iOS 7 anymore</li>
+</ul>
+
+<p>1.32.3 Mar 3, 2015</p>
+
+<ul>
+<li>Improved waiver upload mechanism</li>
+<li>Prevent users from logging out when there are unsynced waivers</li>
+</ul>
+
+<p>1.32.2 Feb 23, 2015</p>
+
+<ul>
+<li>Minor bug fixed</li>
+</ul>
+
+<p>1.32 Feb 1, 2015</p>
+
+<ul>
+<li>Fixed critical bugs introduced in last update.</li>
+</ul>
+
+<p>1.31 Jan 21, 2015</p>
+
+<ul>
+<li>Optmized signature capture</li>
+</ul>
+
+<p>1.30 Jan 18, 2015</p>
+
+<ul>
+<li>Added a button to show waiver list</li>
+<li>Added a button to switch camera</li>
+<li>Disabled scan ID feature for unsupported devices</li>
+<li>Minor bug fixed</li>
+</ul>
+
+<p>1.29 Jul 13, 2014</p>
+
+<ul>
+<li>Improved performance when uploading large waivers</li>
+</ul>
+
+<p>1.28 Apr 9, 2014</p>
+
+<ul>
+<li>Improved performance for old devices</li>
+<li>fixed bugs</li>
+</ul>
+
+<p>1.27 Mar 26, 2014</p>
+
+<ul>
+<li>fixed a display issue in iOS7</li>
+</ul>
+
+<p>1.26 Mar 16, 2014</p>
+
+<ul>
+<li>splash page image size changes based on the screen size</li>
+</ul>
+
+<p>1.25 Mar 09, 2014</p>
+
+<ul>
+<li>support default value for checkbox</li>
+</ul>
+
+<p>1.24 Feb 19, 2014</p>
+
+<ul>
+<li>support email address validation</li>
+<li>support different name and date format</li>
+</ul>
+
+<p>1.23 Dec 28, 2013</p>
+
+<ul>
+<li>support scanning ID with front camera</li>
+</ul>
+
+<p>1.22.3, 1.22.2 Dec 10, 2013</p>
+
+<ul>
+<li>some UI tweaks</li>
+</ul>
+
+<p>1.22.1 Nov 18, 2013</p>
+
+<ul>
+<li>UI improved</li>
+</ul>
+
+<p>1.22 Nov 13, 2013</p>
+
+<ul>
+<li>bug fixed</li>
+<li>support scanning driver&#39;s license</li>
+</ul>
+
+<p>1.21 Oct 31, 2013</p>
+
+<ul>
+<li>support splash page</li>
+</ul>
+
+<p>1.20 Oct 27, 2013</p>
+
+<ul>
+<li>support attach pictures to waivers</li>
+<li>scan the QR code to add pictures for existing waivers</li>
+</ul>
+
+<p>1.19 Sep 30, 2013</p>
+
+<ul>
+<li>minor display bug fixed</li>
+</ul>
+
+<p>1.18 Sep 24, 2013</p>
+
+<ul>
+<li>optimized for iOS7</li>
+</ul>
+
+<p>1.17 Sep 24, 2013</p>
+
+<ul>
+<li>fixed a important bug caused by iOS7</li>
+</ul>
+
+<p>1.16.1 Sep 9, 2013</p>
+
+<ul>
+<li>fixed a bug caused by unsupported chars in the email address</li>
+</ul>
+
+<p>1.16 Aug 27, 2013</p>
+
+<ul>
+<li>UI improved</li>
+<li>tap on sub field will now focus on that sub field</li>
+</ul>
+
+<p>1.15.1 Jul 27, 2013</p>
+
+<ul>
+<li>fixed typo</li>
+</ul>
+
+<p>1.15 Jul 23, 2013</p>
+
+<ul>
+<li>major UI improvement</li>
+<li>phone number formatter</li>
+<li>dialog won&#39;t close if click outside by accident</li>
+</ul>
+
+<p>1.14 Jun 12, 2013</p>
+
+<ul>
+<li>better signature quality</li>
+<li>no more misclicks when signing</li>
+</ul>
+
+<p>1.13 May 24, 2013</p>
+
+<ul>
+<li>UI improved</li>
+<li>added scroll down button for very long waivers</li>
+<li>fixed typo</li>
+</ul>
+
+<p>1.12.1 May 1, 2013</p>
+
+<ul>
+<li>fixed typo</li>
+</ul>
+
+<p>1.12 Apr 21, 2013</p>
+
+<ul>
+<li>settings menu adjustment</li>
+<li>added settings button</li>
+<li>added tutorial</li>
+</ul>
+
+<p>1.11 Apr 19, 2013</p>
+
+<ul>
+<li>more secure</li>
+<li>improved performance under poor internet environment</li>
+</ul>
+
+<p>1.10.3 Mar 27, 2013</p>
+
+<ul>
+<li>added invite friend option</li>
+</ul>
+
+<p>1.10.2 Mar 24, 2013</p>
+
+<ul>
+<li>UI adjustment</li>
+<li>bug fixed</li>
+</ul>
+
+<p>1.10.1 Mar 20, 2013</p>
+
+<ul>
+<li>fixed a display bug</li>
+</ul>
+
+<p>1.10 Mar 7, 2013</p>
+
+<ul>
+<li>support multiple waivers</li>
+<li>minor refresh bug fixed</li>
+</ul>
+
+<p>1.9.7 Feb 20, 2013</p>
+
+<ul>
+<li>better waiver submit effect</li>
+<li>added pull to refresh</li>
+<li>minor bug fixed</li>
+</ul>
+
+<p>1.9.6 Feb 20, 2013</p>
+
+<ul>
+<li>UI improved</li>
+</ul>
+
+<p>1.9.5 Jan 17, 2013</p>
+
+<ul>
+<li>added some help pages</li>
+</ul>
+
+<p>1.9.4 Jan 15, 2013</p>
+
+<ul>
+<li>added logo</li>
+<li>added welcome screen</li>
+<li>password requirement changed</li>
+<li>UI improvement</li>
+</ul>
+
+<p>1.9.3 Dec 4, 2012</p>
+
+<ul>
+<li>allow user to register account from device</li>
+<li>added some hints</li>
+<li>allow user to turn off the hint from settings</li>
+<li>some bugs fixed</li>
+</ul>
+
+<p>1.9.2 Nov 12, 2012</p>
+
+<ul>
+<li>added testflight to measure performance</li>
+</ul>
+
+<p>1.9.1 Nov 1, 2012</p>
+
+<ul>
+<li>register hint at login screen</li>
+</ul>
+
+<p>1.9.0 Oct 3, 2012</p>
+
+<ul>
+<li>support iPhone 5 and iOS 6</li>
+<li>doc version updated to 2.0</li>
+<li>UI improvement</li>
+</ul>
+
+<p>1.8.2 Jun 28, 2012</p>
+
+<ul>
+<li>much better performance</li>
+<li>unlink device when log out</li>
+<li>some UI adjustment</li>
+<li>confirm to clear local docs</li>
+</ul>
+
+<p>1.8.1 Jun 28, 2012</p>
+
+<ul>
+<li>fixed an important display bug</li>
+</ul>
+
+<p>1.8 Jun 27, 2012</p>
+
+<ul>
+<li>support scroll mode</li>
+</ul>
+
+<p>1.7 Jun 1, 2012</p>
+
+<ul>
+<li>support viewing signed docs history</li>
+</ul>
+
+<p>1.6.3 May 30, 2012</p>
+
+<ul>
+<li>html cells now return right height</li>
+<li>hint will hide after displayed 5 times</li>
+<li>some refresh mechanism improvement</li>
+<li>added clear button to text fields</li>
+</ul>
+
+<p>1.6.2 May 25, 2012</p>
+
+<ul>
+<li>page control display improved</li>
+<li>tap the text to check (checkbox)</li>
+<li>added log out button</li>
+<li>login view little adjustment</li>
+<li>add error doc handler</li>
+</ul>
+
+<p>1.6.1 May 21, 2012</p>
+
+<ul>
+<li>multiple language support mechanism changed</li>
+</ul>
+
+<p>1.6 May 14, 2012</p>
+
+<ul>
+<li>some UI adjustment</li>
+<li>added checkbox cell</li>
+</ul>
+
+<p>1.5 May 6, 2012</p>
+
+<ul>
+<li>fixed the refresh bug</li>
+<li>added account info view</li>
+</ul>
+
+<p>1.4.1 May 5, 2012</p>
+
+<ul>
+<li>auto upload switch moves to settings view</li>
+<li>new way to open settings view (two fingers slide up from bottom of * the screen)</li>
+<li>filled data no longer automatically cleared</li>
+<li>UI improved</li>
+</ul>
+
+<p>1.4 May 4, 2012</p>
+
+<ul>
+<li>support auto rotation (iPad only)</li>
+<li>new icon</li>
+<li>some small bugs fixed</li>
+</ul>
+
+<p>1.3.1 May 3, 2012</p>
+
+<ul>
+<li>new icon</li>
+<li>added testflight SDK</li>
+</ul>
+
+<p>1.3 May 2, 2012</p>
+
+<ul>
+<li>support landscape mode (iPad only)</li>
+<li>support manually upload docs</li>
+</ul>
+
+<p>1.2 May 2, 2012</p>
+
+<ul>
+<li>fixed some UI bugs</li>
+<li>no longer display account info button in customer mode</li>
+<li>highlight the required cells</li>
+</ul>
+
+<p>1.1 Apr 23, 2012</p>
+
+<ul>
+<li>title support multiple line</li>
+<li>bigger text area</li>
+<li>bigger signature area</li>
+</ul>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+
+</body>
+
+</html>
