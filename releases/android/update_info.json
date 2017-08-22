@@ -1,8 +1,8 @@
 {
-    "vc": 70,
-    "vn": "2.5.0",
-    "log": "1. Fix some bugs\n2. some new features",
+    "vc": 62,
+    "vn": "2.1.3",
+    "log": "1. Fix annoying offline alert after clicking submit button\n2. Refine Scan ID (More accurate and reasonable behavior)\n3. Mark blank value in required dropdown list as Invalid\n4. Other small UI Fixes",
     "min_vc": 0,
     "alert": true,
-    "alert_interval_in_min": 3
+    "alert_interval_in_min": 720
 }
