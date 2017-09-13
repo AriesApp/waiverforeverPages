@@ -1,8 +1,8 @@
 {
-    "vc": 62,
-    "vn": "2.1.3",
-    "log": "1. Fix annoying offline alert after clicking submit button\n2. Refine Scan ID (More accurate and reasonable behavior)\n3. Mark blank value in required dropdown list as Invalid\n4. Other small UI Fixes",
+    "vc": 100,
+    "vn": "3.0.0",
+    "log": "After months of hard work, we’re proud to deliver our new version!\nIn the new version, we explicitly divided the app into two parts: the app console and kiosk.\nThe kiosk is the old friend you’re already familiar with. The app console is like your best friend, who can help you deal with your everyday tasks on the go.\nThere are four new tabs in the app console:\n\n1. Dashboard: view devices, templates, and waiver usage.\n2 Templates: all your templates and signed waivers on the cloud.\n3 Account: profile and settings\n4 More: about, help center, and support.",
     "min_vc": 0,
-    "alert": true,
+    "alert": false,
     "alert_interval_in_min": 720
 }
