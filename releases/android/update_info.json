@@ -1,7 +1,7 @@
 {
-    "vc": 100,
-    "vn": "3.0.0",
-    "log": "After months of hard work, we’re proud to deliver our new version!\nIn the new version, we explicitly divided the app into two parts: the app console and kiosk.\nThe kiosk is the old friend you’re already familiar with. The app console is like your best friend, who can help you deal with your everyday tasks on the go.\nThere are four new tabs in the app console:\n\n1. Dashboard: view devices, templates, and waiver usage.\n2 Templates: all your templates and signed waivers on the cloud.\n3 Account: profile and settings\n4 More: about, help center, and support.",
+    "vc": 30600,
+    "vn": "3.6.0",
+    "log": "This is a minor update version:\n1. Add consent screen support.\n2. Improve driver licenses scanning",
     "min_vc": 0,
     "alert": false,
     "alert_interval_in_min": 720
