@@ -1,7 +1,7 @@
 {
-    "vc": 30600,
-    "vn": "3.6.0",
-    "log": "This is a minor update version:\n1. Add consent screen support.\n2. Improve driver licenses scanning",
+    "vc": 30900,
+    "vn": "3.9.0",
+    "log": "1. Enhanced page switching logic.\n2. Auto scroll to the first form validation error.\n3. Minor bug fixes.",
     "min_vc": 0,
     "alert": false,
     "alert_interval_in_min": 720
