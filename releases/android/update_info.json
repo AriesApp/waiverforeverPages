@@ -1,8 +1,8 @@
 {
-    "vc": 30900,
-    "vn": "3.9.0",
-    "log": "1. Enhanced page switching logic.\n2. Auto scroll to the first form validation error.\n3. Minor bug fixes.",
+    "vc": 33400,
+    "vn": "3.34.0",
+    "log": "1. Minor bug fixes.",
     "min_vc": 0,
-    "alert": false,
-    "alert_interval_in_min": 720
+    "alert": true,
+    "alert_interval_in_min": 360
 }
